@@ -1,5 +1,5 @@
 export interface pelicula {
-    title: string;
+    title?: string;
     episode_id?: number;
     opening_crawl?: string;
     director?: string;
@@ -21,4 +21,3 @@ export interface film {
     previous?: any,
     results?: pelicula[],
 }
-

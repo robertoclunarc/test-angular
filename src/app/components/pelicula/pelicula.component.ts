@@ -25,43 +25,7 @@ export interface PeriodicElement {
 export class PeliculaComponent implements OnInit {
   displayedColumns: string[] = ['title', 'producer', 'director', 'release_date', 'ViewDet'];
   dataSource: MatTableDataSource<pelicula>;
-  ELEMENT_DATA: film = {/*
-    count: 1, next: null, previous: null, results: [
-      {
-        title: 'title1',
-        producer: 'productor1',
-        director: 'director1',
-        release_date: '1998-04-21',
-        opening_crawl: 'fjkksdjfsd fkljlkd jhdjnd jhdojdka jhdjhasd qjhdjoanda ',
-        url: 'http://jdbsfbdnmsdnn.com',
-      },
-      {
-        title: 'title2',
-        producer: 'productor2',
-        director: 'director2',
-        release_date: '1998-04-22',
-        opening_crawl: 'fjkksdjfsd fkljlkd jhdjnd jhdojdka jhdjhasd qjhdjoanda ',
-        url: 'http://jdbsfbdnmsdnn.com',
-      },
-      {
-        title: 'title3',
-        producer: 'productor3',
-        director: 'director3',
-        release_date: '1998-04-23',
-        opening_crawl: 'fjkksdjfsd fkljlkd jhdjnd jhdojdka jhdjhasd qjhdjoanda ',
-        url: 'http://jdbsfbdnmsdnn.com',
-      },
-      {
-        title: 'title4',
-        producer: 'productor4',
-        director: 'director4',
-        release_date: '1998-04-24',
-        opening_crawl: 'fjkksdjfsd fkljlkd jhdjnd jhdojdka jhdjhasd qjhdjoanda ',
-        url: 'http://jdbsfbdnmsdnn.com',
-      }
-    ]
-   */
-  };
+  ELEMENT_DATA: film = {};
 
   constructor(private srvPeliculas: PeliculaService
 		) { }
@@ -82,4 +46,8 @@ export class PeliculaComponent implements OnInit {
 		this.ELEMENT_DATA = await this.srvPeliculas.consultarTodos();
     console.log(this.ELEMENT_DATA)
 	}
+
+  detalles(peli: pelicula){    
+    console.log(peli.opening_crawl)
+  }
 }

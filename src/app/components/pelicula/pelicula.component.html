@@ -33,7 +33,12 @@
         <!-- Symbol Column -->
         <ng-container matColumnDef="ViewDet">
             <th mat-header-cell *matHeaderCellDef> View Det.</th>
-            <td mat-cell *matCellDef="let element"> {{element.url}} </td>
+            <td mat-cell *matCellDef="let element">              
+                
+                <button mat-mini-fab color="primary" aria-label="View Details" (click)="detalles(element)">
+                    <mat-icon>menu</mat-icon>
+                  </button>
+            </td>
             </ng-container>
     
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
