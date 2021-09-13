@@ -34,11 +34,10 @@ export class ParticipacionesComponent implements OnInit {
 
     async verDeatalle (){		
 		this.people = await this.srvActores.consultarActor(this.urlActor);
-        console.log(this.people);
+        
 	} 
 
-    async traerParticipaciones (){
-        let pel: pelicula={}; 
+    async traerParticipaciones (){        
 
         this.people.films?.forEach(f => {
 
@@ -47,8 +46,6 @@ export class ParticipacionesComponent implements OnInit {
 			.then(data => {
 				
 				this.pelis.push(data);
-					
-				console.log(data)
 				
 			});
             

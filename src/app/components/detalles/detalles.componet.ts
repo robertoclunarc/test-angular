@@ -36,7 +36,7 @@ export class DetallesComponent implements OnInit {
 
     async verDeatalle (){		
 		this.peli = await this.srvPeliculas.consultarPeli(this.urlPeli)
-        console.log(this.peli);
+        
 	}
 
     async traerActores (){
@@ -50,7 +50,7 @@ export class DetallesComponent implements OnInit {
                 resp.films?.forEach( f => {                   
                     if (f == this.urlPeli){
                         this.actores.push(resp) 
-                        console.log(resp.name)                       
+                                              
                     }
                 })                
             });
