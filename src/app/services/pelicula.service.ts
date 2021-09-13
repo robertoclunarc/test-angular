@@ -13,15 +13,9 @@ export class PeliculaService {
 		this.url = environment.apiUrl + 'films';
 	}
 
-
 	consultarTodos(): Promise<film> {
 
 		return this.http.get<film>(this.url).toPromise();
-	}
-
-	consultarUno(film: number): Promise<pelicula> {
-
-		return this.http.get<pelicula>(this.url + `/${film}`).toPromise();
 	}
 
 	consultarPeli(url: string): Promise<pelicula> {

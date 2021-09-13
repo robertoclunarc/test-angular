@@ -1,4 +1,11 @@
-.example-card {
+.main-div{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ .example-card {
     max-width: 400px;
   }
   
@@ -28,6 +35,10 @@
     font-size: 14px;
     margin-left: 8px;
     min-width: 120px;
+  }
+
+  .class-label {
+    font-weight:bold
   }
   
   .example-button-row {

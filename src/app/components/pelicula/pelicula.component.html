@@ -1,8 +1,8 @@
 <mat-card class="example-card">
     <mat-form-field appearance="standard">
-               
-        <input matInput (keyup)="applyFilter($event)" placeholder="Filter" #input>
-    </mat-form-field>
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="" #input>
+      </mat-form-field>
     
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     

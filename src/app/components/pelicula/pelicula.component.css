@@ -3,6 +3,17 @@ table {
   width: 100%;
 }
 
+.main-div{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.class-label {
+  font-weight:bold
+}
+
 .mat-form-field {
   font-size: 14px;
   width: 100%;

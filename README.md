@@ -5,13 +5,17 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Comentarios del Desarrollador del test
 
 Para Navegar `http://localhost:4200/star-war`
-hacer click en los botones corespondiente a la pelicula al que quiere detallar.
-# Página principal:
+hacer click en los botones corespondiente a la pelicula al que quiere detallar
+
+# Página principal
+
 - Listado de películas
 - Buscador de peliculas
 
 # Detalle de película
-hacer cli en el nombre del actor para listar sus peliculas en las que participo
+
+hacer cli en el nombre del actor para listar sus peliculas en las que participo.
+
 - información de película
 - Actores involucrados en la película
 - Listado por actor de películas donde participaron.

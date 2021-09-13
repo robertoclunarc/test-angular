@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   apiUrl: 'https://swapi.dev/api/',
+  //apiUrl: 'http://localhost:3006/api/test/test1',
 };
 
 /*

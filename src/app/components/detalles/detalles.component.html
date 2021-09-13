@@ -1,4 +1,5 @@
-    <mat-card  class="example-card">
+<div class="main-div">
+      <mat-card  class="example-card">
         <mat-card-header>
           <div mat-card-avatar  class="example-header-image"></div>
           <mat-card-title>{{ peli.title }}</mat-card-title>
@@ -9,37 +10,36 @@
           <p>
             {{ peli.opening_crawl }}
           </p>
-        </mat-card-content>
-       
+        </mat-card-content>       
         
         <mat-list>
-          <mat-list-item>Actores: haga Click en el nombre del protagonista para ver sus participaciones</mat-list-item> 
-          <mat-divider></mat-divider>  
-             
+          <mat-list-item><label  class="class-label">Actores: </label> </mat-list-item> 
+          <mat-divider></mat-divider>             
         </mat-list>
-
-
-        
-
+        <p>          
+        </p>
         <mat-chip-list
           class="example-chip"
           cdkDropList 
           cdkDropListOrientation="horizontal"
           >
-          <mat-chip (click)="verActor(actor)"
+          <mat-chip title="haga Click en el nombre del protagonista para ver sus participaciones" (click)="verActor(actor)"
             class="example-box"
             cdkDrag
             *ngFor="let actor of actores">
             {{actor.name}}
-          </mat-chip>
-          
-        </mat-chip-list>     
-       
+          </mat-chip>          
+        </mat-chip-list>
+        <p>          
+        </p>
+        <mat-divider></mat-divider> 
+
         <mat-card-actions>           
-          <button (click)="atras()" mat-button>Back</button>
+          <button (click)="atras()" mat-stroked-button>Back</button>
         </mat-card-actions>
       
     </mat-card>
+</div>    
 
     
 
