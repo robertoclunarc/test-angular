@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 import { pelicula, film} from './../../models/pelicula.model';
 import { PeliculaService} from './../../services/pelicula.service';
+import { Router } from '@angular/router';
 
 export interface PeriodicElement {
   name: string;
@@ -27,7 +28,8 @@ export class PeliculaComponent implements OnInit {
   dataSource: MatTableDataSource<pelicula>;
   ELEMENT_DATA: film = {};
 
-  constructor(private srvPeliculas: PeliculaService
+  constructor(private srvPeliculas: PeliculaService,
+    private router: Router
 		) { }
 
     async ngOnInit() {
@@ -48,6 +50,8 @@ export class PeliculaComponent implements OnInit {
 	}
 
   detalles(peli: pelicula){    
-    console.log(peli.opening_crawl)
+    console.log(peli.opening_crawl);
+    this.router.navigate(["detalles", peli.url]);
   }
+
 }

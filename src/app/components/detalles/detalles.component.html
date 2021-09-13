@@ -1,0 +1,46 @@
+    <mat-card  class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar  class="example-header-image"></div>
+          <mat-card-title>{{ peli.title }}</mat-card-title>
+          <mat-card-subtitle>{{ peli.release_date }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="./../../../assets/img/fotonoticia.jpg" alt="Photo Ref">
+        <mat-card-content>
+          <p>
+            {{ peli.opening_crawl }}
+          </p>
+        </mat-card-content>
+       
+        
+        <mat-list>
+          <mat-list-item>Actores: haga Click en el nombre del protagonista para ver sus participaciones</mat-list-item> 
+          <mat-divider></mat-divider>  
+             
+        </mat-list>
+
+
+        
+
+        <mat-chip-list
+          class="example-chip"
+          cdkDropList 
+          cdkDropListOrientation="horizontal"
+          >
+          <mat-chip (click)="verActor(actor)"
+            class="example-box"
+            cdkDrag
+            *ngFor="let actor of actores">
+            {{actor.name}}
+          </mat-chip>
+          
+        </mat-chip-list>     
+       
+        <mat-card-actions>           
+          <button (click)="atras()" mat-button>Back</button>
+        </mat-card-actions>
+      
+    </mat-card>
+
+    
+
+

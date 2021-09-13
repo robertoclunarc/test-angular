@@ -24,4 +24,9 @@ export class PeliculaService {
 		return this.http.get<pelicula>(this.url + `/${film}`).toPromise();
 	}
 
+	consultarPeli(url: string): Promise<pelicula> {
+
+		return this.http.get<pelicula>(url).toPromise();
+	}
+
 }

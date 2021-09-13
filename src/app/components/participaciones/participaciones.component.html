@@ -1,0 +1,57 @@
+<mat-card  class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar  class="example-header-image"></div>
+      <mat-card-title>{{ people.name }}</mat-card-title>
+      <mat-card-subtitle>{{ people.gender }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="./../../../assets/img/fotonoticia.jpg" alt="Photo Ref">
+    <mat-card-content>
+      <p>
+      Hair Color : {{ people.hair_color }}
+      </p>
+      <p>
+        Height : {{ people.height }}
+        </p>
+        <p>
+            Mass : {{ people.mass }}
+            </p>
+            <p>
+                Skin Color : {{ people.skin_color }}
+                </p>
+                <p>
+                    Eye Color : {{ people.eye_color }}
+                    </p>
+                    <p>
+                        Created : {{ people.created | date:'dd/MM/yyyy' }}
+                        </p>
+    </mat-card-content>
+
+    <mat-list>
+        <mat-list-item>Films:</mat-list-item> 
+        <mat-divider></mat-divider>  
+           
+      </mat-list>
+   
+
+    <mat-chip-list
+          class="example-chip"
+          cdkDropList 
+          cdkDropListOrientation="horizontal"
+          >
+          <mat-chip (click)="verPeli(p)"
+            class="example-box"
+            cdkDrag
+            *ngFor="let p of pelis">
+            {{p.title}}
+          </mat-chip>
+          
+        </mat-chip-list> 
+
+    <mat-card-actions>
+     
+        <button (click)="atras()" mat-button>Back</button>
+      
+    </mat-card-actions>
+  
+  
+</mat-card>
